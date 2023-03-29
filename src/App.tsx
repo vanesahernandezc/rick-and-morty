@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from "react";
+import "./App.css";
+import homeImg from "./img/rick-morty.png";
+import Characters from "./components/Characters";
 function App() {
-  const [count, setCount] = useState(0)
+  const [characters, setCharacters] = useState([]);
 
+  const getCharacters = async () => {
+    const charactersResponse = await fetch(
+      "https://rickandmortyapi.com/api/character"
+    );
+    const charactersApi = await charactersResponse.json();
+    setCharacters(charactersApi.results);
+  };
   return (
+    //Falta hacer la interface para el useState
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="App-header">
+        <h1 className="title">Rick & Morty</h1>
+        {characters ? (
+          <Characters characters={characters} />
+        ) : (
+          <>
+            <img src={homeImg} alt="img-home" className="img-home" />
+            <button onClick={getCharacters} className="btn-search">
+              Buscar Personajes
+            </button>
+          </>
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
