@@ -1,4 +1,4 @@
-import React from "react";
+import { ICharacters } from "../interface/ICharacters";
 
 export function Characters(props: any) {
   const { characters, setCharacters } = props;
@@ -14,7 +14,7 @@ export function Characters(props: any) {
         Back to home
       </span>
       <div className="container-characters">
-        {characters.map((character: any, index: number) => (
+        {characters.map((character: ICharacters, index: number) => (
           <div className="character-container" key={index}>
             <div>
               <img src={character.image} alt={character.name} />

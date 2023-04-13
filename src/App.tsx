@@ -2,8 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import homeImg from "./img/rick-morty.png";
 import { Characters } from "./components/Characters";
+import { ICharacters } from "./interface/ICharacters";
 function App() {
-  const [characters, setCharacters] = useState(null);
+  const [characters, setCharacters] = useState<ICharacters[] | undefined>(
+    undefined
+  );
 
   const getCharacters = async () => {
     const charactersResponse = await fetch(
@@ -14,7 +17,6 @@ function App() {
   };
   console.log(characters);
   return (
-    //Falta hacer la interface para el useState y quitar los any type
     <div className="App">
       <div className="App-header">
         <h1 className="title">Rick & Morty</h1>

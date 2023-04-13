@@ -1,15 +1,15 @@
 body {
   margin: 0;
-  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  font-family: "Oxygen", "Roboto", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .title {
-  color: #738f93;
-  font-size: 40px;
-  font-family: fantasy, sans-serif;
+  color: #c95583;
+  font-size: 80px;
+  font-family: Oxygen Cantarell, fantasy, sans-serif;
   margin-bottom: 0;
 }
 
@@ -19,10 +19,10 @@ body {
 }
 
 .btn-search {
-  background-color: #1ba94c;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgb(27 169 76 / 50%);
-  font-size: 18.005px;
+  background-color: #8cc2bd;
+  color: #364247;
+  box-shadow: 0 4px 12px rgb(237 67 166 / 50%);
+  font-size: 20px;
   padding-left: 1.528em;
   padding-right: 1.528em;
   padding-top: 0;
@@ -124,7 +124,7 @@ body {
 .back-home {
   text-decoration: underline;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 @media (max-width: 768px) {
