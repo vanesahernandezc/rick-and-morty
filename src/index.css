@@ -7,10 +7,11 @@ body {
 }
 
 .title {
-  color: #c95583;
+  color: #e6e888;
   font-size: 80px;
   font-family: Oxygen Cantarell, fantasy, sans-serif;
   margin-bottom: 0;
+  text-shadow: 0 4px 12px rgb(36 35 36 / 50%);
 }
 
 .img-home {
@@ -19,7 +20,7 @@ body {
 }
 
 .btn-search {
-  background-color: #d3f0c6;
+  background-color: #e6e888;
   color: #364247;
   box-shadow: 0 4px 12px rgb(36 35 36 / 50%);
   font-size: 20px;
